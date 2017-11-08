@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FEE3F8E6-4098-4B9B-A946-9B952BC7095E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EnglishTrainer</RootNamespace>
+    <AssemblyName>EnglishTrainer</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Application\ExamineService.cs" />
+    <Compile Include="Application\IExamineService.cs" />
+    <Compile Include="Application\ITrainerService.cs" />
+    <Compile Include="Application\IUserService.cs" />
+    <Compile Include="Application\IViewerService.cs" />
+    <Compile Include="Application\TrainerService.cs" />
+    <Compile Include="Application\UserService.cs" />
+    <Compile Include="Application\ViewerService.cs" />
+    <Compile Include="Domain\IUserRepository.cs" />
+    <Compile Include="Domain\IViewer.cs" />
+    <Compile Include="Domain\IWordListForUserRepository.cs" />
+    <Compile Include="Domain\IWordRepository.cs" />
+    <Compile Include="Domain\IСhoice.cs" />
+    <Compile Include="Domain\NickNameComparer.cs" />
+    <Compile Include="Domain\User.cs" />
+    <Compile Include="Domain\Viewer.cs" />
+    <Compile Include="Domain\Word.cs" />
+    <Compile Include="Domain\WordInList.cs" />
+    <Compile Include="Domain\WordsListForUser.cs" />
+    <Compile Include="Domain\Сhoice.cs" />
+    <Compile Include="Infrastructure\InMemoryUserRepository.cs" />
+    <Compile Include="Infrastructure\InMemoryWordRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
